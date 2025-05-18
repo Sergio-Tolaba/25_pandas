@@ -1,0 +1,81 @@
+Pandas E/S: trabajando con diferentes formatos de archivo
+Realice este curso para Data Science y:
+Comprenda qué son los archivos CSV, XLSX, JSON, HTML y XML
+Comprenda cómo trabajar con diferentes tipos de datos, tanto de entrada como de salida (input/output)
+Leer datos de Google Sheets
+Obtener tablas de páginas web
+Crear una base de datos local
+Escribir en una base de datos local
+Realizar consultas SQL
+Aulas
+Leyendo archivos CSV Ver el primer video
+0 / 10
+33min
+Leyendo archivos Excel
+0 / 10
+40min
+Leyendo archivos JSON
+0 / 9
+22min
+Leyendo páginas en HTML e XML
+0 / 10
+22min
+Leyendo banco de datos
+0 / 12
+52min
+Formación con este curso
+
+Python para Data Science
+
+Instructor
+instructor Alejandro Gamarra
+Alejandro Gamarra
+Linkedin
+
+Github
+
+Soy especialista en BI/Big Data, tengo +20 años de experiencia trabajando en las unidades de Data Science de Telefónica, con proyectos de Big Data a nivel mundial. Me emociona todo lo relacionado con Data Science e Inteligencia Artificial, y siento una verdadera devoción en compartir este conocimiento. Sígueme en mis redes sociales: ===============&gt; Linkedin: https://www.linkedin.com/in/ElProfeAlejo/ Youtube: https://www.youtube.com/@ElProfeAlejo/
+
+Apoyo al aprendizaje
+Icono de Luri
+Luri, la IA de Alura
+Habla con Luri para aclarar tus dudas y repasar el contenido de la clase. Conoce a Luri
+
+Más sobre el curso
+Foro del curso
+**********************************************
+*********************************************
+01.Leyendo archivosCSV
+01 Presentación
+En esta clase, el instructor Alejandro Gamarra, también conocido como el Profesor Alejo, da la bienvenida a los estudiantes al entrenamiento de Python enfocado en la entrada y salida de datos. El objetivo principal es aprender a leer y escribir diferentes formatos de archivos, lo cual es fundamental para los científicos de datos en su trabajo diario.
+
+Durante el curso, se abordarán varios tipos de archivos, incluyendo CSV, Excel, JSON, HTML, XML y bases de datos SQL. Cada tipo de archivo será explorado a través de casos de uso específicos, lo que permitirá a los estudiantes familiarizarse con la manipulación de diferentes tipos de información.
+
+El profesor anima a los estudiantes a comenzar el curso y promete una experiencia educativa enriquecedora.
+**********************************************************
+02
+Preparando el ambiente
+ Siguiente pregunta
+
+Antes de empezar…
+
+Google Collaboratory, o Colab para abreviar, es una herramienta gratuita basada en la nube que le permite ejecutar y escribir código Python sin necesidad de configurar software ni hardware local. Es una excelente herramienta para ejecutar código de análisis de datos y otros tipos de proyectos de programación.
+
+Para comenzar a utilizar la plataforma es necesario tener una cuenta de Gmail. Si aún no tienes una, deberás crearla. Después de iniciar sesión, vaya a la página de Google Colab y haga clic en el menú superior en "Archivo" y elija la opción "Nuevo cuaderno". Es el banco de trabajo de Colab donde puedes escribir y ejecutar código Python.
+
+Colab se ejecuta en los servidores de Google, por lo que proporciona una máquina virtual en la nube con recursos como CPU, memoria y espacio en disco. Para ejecutar un código, simplemente escríbalo en una celda de código y haga clic en el botón "Ejecutar" o presione Shift + Enter.
+
+Para seguir el desarrollo de los proyectos a lo largo del curso y reproducir todo lo realizado, puedes descargar los archivos iniciales aquí .
+
+¿Vamos a empezar?
+****************************************************************
+03
+Importando archivos CSV
+En esta clase, aprendimos cómo importar y leer archivos CSV utilizando la biblioteca Pandas en Python. Comenzamos con un caso práctico en el que trabajamos para una cadena de supermercados que necesita identificar a sus mejores clientes para ofrecerles un descuento. Para ello, se nos proporcionó un archivo CSV llamado SuperStoreData.csv, que contiene información sobre los clientes.
+
+Primero, se explicó cómo subir el archivo a Google Colab y luego se importó la biblioteca Pandas, asignándole el alias pd. Utilizamos el método read_csv de Pandas para leer el archivo CSV y almacenar su contenido en un DataFrame, que es una estructura de datos más fácil de manejar y analizar.
+
+También se mostró cómo inspeccionar las primeras cinco líneas del DataFrame utilizando el método head, lo que nos permitió ver la información de manera tabular. Además, se discutió qué sucede si el archivo CSV utiliza un separador diferente, como el punto y coma, y se planteó la pregunta sobre cómo resolver este problema en la lectura de archivos.
+
+En resumen, la clase se centró en la importancia de importar datos correctamente y cómo Pandas facilita este proceso al transformar archivos CSV en DataFrames para un análisis más efectivo.
+***********************************************************
