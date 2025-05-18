@@ -246,5 +246,175 @@ Escribir un archivo en formato CSV.
 02. Leyendo archivos excel
 01 Proyecto del aula anterior
 Si lo desea, puede descargar aquí el proyecto del curso en el punto donde paramos la clase anterior.
+*******************************************+
+02
+Importando archivos Excel
+En esta clase, aprendimos a importar y trabajar con archivos de Excel utilizando la biblioteca pandas en Python. Comenzamos por entender qué es un archivo de Excel y sus características, como las filas, columnas y hojas que puede contener. Luego, se explicó cómo acceder a un archivo de Excel en Google Sheets y cómo este se diferencia de un archivo CSV.
+
+A continuación, se mostró cómo importar un archivo de Excel en Google Colab, utilizando el método read_excel de pandas. Se enfatizó la importancia de guardar el nombre del archivo en una variable para optimizar el código. También se mencionó que al importar un archivo de Excel, el resultado se convierte automáticamente en un dataframe.
+
+Finalmente, se presentó cómo examinar las hojas dentro de un archivo de Excel utilizando el método sheet_names, lo que permite conocer las diferentes hojas disponibles para trabajar. La clase concluyó con la promesa de explorar más sobre cómo seleccionar hojas específicas en el próximo video.
+
+Si tienes alguna pregunta o necesitas más detalles sobre algún aspecto, ¡estaré encantado de ayudarte!
+******************************************************
+03 Para saber más: profundizando en la función read_excel
+ Siguiente pregunta
+
+Microsoft Excel es una de las herramientas de hojas de cálculo más utilizadas en el mundo, siendo ampliamente utilizada para almacenar y analizar datos en formato de tabla. En el video anterior, mostramos cómo la función read_excel se puede usar para leer un archivo de Excel en formato xlsx. Sin embargo, esta función es capaz de leer archivos en otros formatos, como: xls, xlsm, xlsb, odf, ods y odt.
+
+¿Vamos a entender un poco más sobre estos diferentes tipos de archivos?
+
+xls
+
+El formato xls es un formato de archivo de Excel más antiguo y se utilizó hasta la versión de 2003.
+
+xlsx
+
+El formato xlsx es el formato de archivo de Excel predeterminado a partir de la versión 2007. Este formato se basa en XML(Extensible Markup Language - Lenguaje de marcación extensible) y es ampliamente compatible con otras herramientas de hojas de cálculo online, incluida Google Sheets.
+
+Atención : Si tienes dudas sobre el término XML, ¡no te preocupes! Tendremos un aula sobre este tema más adelante. En ella entenderás qué es este formato, cómo leer y escribir en XML.
+
+xlsm
+
+También existe xlsm, una extensión de archivo utilizada por Excel para almacenar hojas de cálculo que contienen macros. Son secuencias de comandos o instrucciones que se pueden ejecutar automáticamente para realizar tareas específicas en la hoja de trabajo.
+
+Entonces, el formato xlsm permite guardar las macros junto con la hoja de trabajo, de modo que puedan ejecutarse cada vez que se abra la hoja de trabajo.
+
+xlsb
+
+Por último, tenemos el formato xlsb, una extensión de archivo que utiliza Excel para almacenar hojas de cálculo en formato binario. La codificación binaria permite abrir y guardar hojas de cálculo más rápido que aquellas en formato xlsx.
+
+Los formatos odf, ods y odt son archivos abiertos, gratuitos y universales que pueden ser utilizados por cualquier software, es decir, fueron creados para ser independientes de plataformas, esto quiere decir que pueden ser utilizados en diferentes sistemas operativos, como Windows, Linux y Mac OS.
+
+Además, son independientes de aplicaciones y se pueden utilizar en muchos programas diferentes, incluidos OpenOffice, LibreOffice, Google Docs y Microsoft Office. Este estándar de archivos fue creado y es mantenido por OASIS (Organization for the Advancement of Structured Information Standards), una organización internacional creada para desarrollar y promover estándares digitales para su uso en Internet.
+
+¡Muy bien! Ahora sabemos un poco más sobre todos los tipos de archivos que se pueden leer con la función read_excel.
+
+Si deseas profundizar más en el tema, aquí te dejamos algunos enlaces a materiales que fueron utilizados como referencia:
+
+Formatos de archivo compatibles con Excel
+~ https://support.microsoft.com/es-es/office/formatos-de-archivo-que-admite-excel-0943ff2c-6014-4e8d-aaea-b83d51d46247
+OpenDocument
+~ https://pt.wikipedia.org/wiki/OpenDocument
+****************************************************************
+04 Parámetros de la función read_excel
+En esta clase, aprendimos a utilizar la función read_excel de la biblioteca Pandas para leer archivos Excel. Se destacó el uso del parámetro SheetName, que permite abrir una hoja específica dentro del archivo. Se mostró cómo almacenar el resultado en una variable y cómo utilizar métodos como HEAD, TAIL y SAMPLE para examinar los datos de la hoja seleccionada.
+
+Además, se introdujeron los parámetros nRows y useCols, que permiten restringir la cantidad de filas y columnas que se leen del archivo. Se explicó cómo seleccionar un intervalo de columnas (por ejemplo, de A a D) y cuántas filas (como las primeras diez) se querían incluir en el análisis. Finalmente, se mencionó que en la próxima clase se aprenderá a exportar el DataFrame a un archivo Excel.
+
+Si tienes alguna duda específica sobre esta clase, ¡estaré encantado de ayudarte!
+//////////////////////////////////////////////////////////////////////////////////////////////////
+05 Leyendo intervalos
+ Siguiente pregunta
+
+Théo está trabajando en una análisis de datos en Python utilizando la biblioteca Pandas. Él está utilizando una hoja de cálculo de Excel que tiene 4 páginas y quiere leer sólo una de las tablas contenidas en una de ellas. La tabla que quiere leer está en la página "pagos" y los datos están en las primeras 50 filas desde la columna F hasta la columna L de la hoja de cálculo.
+
+¿Cuál es el código correcto que debería usar Théo para leer sólo el intervalo deseado?
+
+Alternativa correta
+df = pd.read_excel('datos.xlsx', sheet='pagos', usecols='F:L', nrows=50)
+
+Alternativa correta
+df = pd.read_excel('datos.xlsx', sheet_name=’pagos’, interval='F:L',  nrows=50)
+
+Alternativa correta
+df = pd.read_excel('datos.xlsx', sheet_name='pagos', usecols='F-L', nrows=50)
+
+Alternativa correta
+df = pd.read_excel('datos.xlsx', sheet_name=’pagos’, usecols='F:L', nrows=50)
+
+El parámetro sheet_name se utiliza para especificar la página de la hoja de cálculo que Théo quiere leer. En este caso, es la página "pagos". El parámetro usecols se utiliza para especificar las columnas que se leerán, que son las columnas de la F a la L. Además, el parámetro nrows se agregó para especificar el número de líneas que Théo quiere leer, que es 50.
+****************************************************************
+06 Escribiendo archivos Excel
+En esta clase, aprendimos cómo exportar un dataframe de Pandas a un archivo Excel. Primero, se destacó la importancia de seleccionar el dataframe correcto, en este caso, intervalo, que contiene toda la información necesaria para el análisis.
+
+El proceso de exportación es sencillo: se utiliza el método to_excel, cambiando la palabra "csv" por "excel" en comparación con el método que se usa para archivos CSV. Se debe especificar el nombre del archivo, como CO2_per_capita.xlsx, y es crucial añadir la extensión .xlsx. Además, se debe establecer index=False para no incluir el índice en el archivo exportado.
+
+Después de exportar, se mostró cómo leer el archivo Excel recién creado utilizando el método read_excel, asegurándose de que los datos se hayan exportado correctamente. Finalmente, se mencionó la posibilidad de trabajar con archivos de Excel en línea, dejando la curiosidad para la próxima clase.
+
+Si tienes alguna pregunta o necesitas más detalles sobre algún aspecto, ¡no dudes en preguntar!
+******************************************************+
+07 Para saber más: importando hacia Google Sheets
+ Siguiente pregunta
+
+Google Sheets es una herramienta de hojas de cálculo online basada en nube que le permite crear, editar y colaborar en hojas de cálculo de manera fácil y conveniente. Es una de las aplicaciones de Google Workspace que ofrece una alternativa a Microsoft Excel.
+
+Con Google Sheets se puede crear y formatear hojas de cálculo, agregar fórmulas y funciones, crear gráficos y tablas dinámicas y trabajar con otros usuarios con datos en tiempo real. También admite la importación y exportación de varios formatos de archivos, como CSV y XLSX.
+
+Una de las principales ventajas de Google Sheets es la colaboración en tiempo real. Varias personas pueden trabajar simultáneamente en la misma hoja de trabajo y ver los cambios simultáneamente. Esto facilita el trabajo en proyectos de equipo, aumentando la eficiencia y la productividad.
+
+Para importar el archivo de Excel emisiones_CO2.xlsx hacia Google Sheets, siga estos pasos:
+
+Abra la página de Google Sheets y haga clic en "Ir a Sheets". Inicie sesión en su cuenta de Google si es necesario.
+Haga clic en Nueva Hoja de cálculo en blanco.
+Cuando haya abierto, haga clic en "Archivo" (File) en el menú superior y luego haga clic en la opción "Importar archivo" (Import).
+Haga clic en la pestaña "Subir" (Upload) y seleccione el archivo que desea importar. Puede hacer clic en la opción Examinar para ubicar el archivo en su computadora o arrastrar el archivo dentro de la pestaña.
+Espere mientras se carga el archivo. Cuando se complete la carga, verá un mensaje de confirmación y podrá hacer clic en "Importar datos" (Import data).
+Después de importar, se mostrarán los datos.
+¡Excelente! Los datos se han importado correctamente. En el siguiente video, aprenderá cómo leer estos datos en Google Colab usando el link para compartir de Google Sheets.
+********************************************************************+
+08 Leyendo datos de Google Sheets
+En esta clase, aprendimos cómo importar archivos de Excel que se encuentran en Google Sheets a nuestros DataFrames en Google Colab. Se explicó el proceso de compartir el archivo de Google Sheets para obtener un enlace que nos permita acceder a los datos.
+
+Primero, se identificó el id del archivo, que es esencial para poder acceder a él. Luego, se mostró cómo construir una URL que incluya el id y otros parámetros necesarios, como gbiz, tq, y tqx.out:csv, para especificar el formato de salida como CSV.
+
+Se explicó cómo utilizar fStrings para combinar texto y variables en Python, lo que facilita la creación de URLs más limpias y manejables. Además, se discutió cómo seleccionar diferentes hojas de un mismo archivo de Excel, utilizando una variable para el nombre de la hoja que se desea abrir.
+
+Finalmente, se demostró cómo leer los datos en formato CSV utilizando pd.read_csv y cómo almacenar esos datos en variables para su posterior análisis. La clase concluyó enfatizando la posibilidad de trabajar con archivos de Excel tanto físicos como en línea.
+**********************************************************
+09 Desafío: leyendo datos de otro link
+ Siguiente pregunta
+
+Es hora de que pongas a prueba los conocimientos desarrollados durante la clase. Tenemos un link de Google Sheets que contiene datos importantes sobre las emisiones de dióxido de carbono en todo el mundo. El conjunto de datos se obtuvo de Kaggle y consta de las emisiones de CO2 per cápita de todos los países del mundo entre 1990 y 2019.
+
+En este desafío, tu función es leer este link de Google Sheets y luego guardar el DataFrame obtenido en formato CSV. ¿Listo para comenzar?
+
+Ver opinión del instructor
+Opinión del instructor
+
+Iniciemos creando una variable que recibirá el ID de la hoja de trabajo.
+
+¿Y dónde encontramos ese id? En el propio link. Es todo lo que aparece entre d/ y /edit.
+Copia el código
+sheet_id = '1clj6rGaGlvZaLto2lgfFA7lodefC0OJgC86WgDm1nMU'
+Copia el código
+A continuación, creamos una variable que almacenará la dirección URL, pero podemos facilitar la escritura usando una f string para el sheet_id. Después de sheet_id tenemos algunos parámetros que se deben agregar.
+
+En este primer momento es importante acceder a la API de visualización de datos de Google. Esto permitirá mostrar los datos de la hoja de cálculo de Google Sheets en Google Colab. Entonces, el parámetro gviz/tq indica que desea acceder a la función de consulta de datos de la API de visualización de datos.
+
+La API también proporciona una forma de recuperar datos de hojas de cálculo como CSV, que es uno de los formatos que puede leer la biblioteca Pandas. Por este motivo indicamos el uso del parámetro tqx=out:csv para que los datos se devuelvan en formato CSV. El parámetro sheet recupera todos los datos de la hoja de trabajo, incluidos los encabezados de las columnas y las filas de datos.
+
+url = f'https://docs.google.com/spreadsheets/d/{sheet_id}/gviz/tq?tqx=out:csv&sheet'
+Copia el código
+Una vez hecho esto, podemos leer los datos pasando la variable url a la función read_csv:
+
+datos = pd.read_csv(url)
+Copia el código
+Para guardar los datos en formato CSV, basta con utilizar la función to_csv y, entre paréntesis, darle un nombre al archivo agregando el parámetro index=False para que no se agregue una nueva columna de índice:
+
+datos.to_csv('datos_emisiones_co2.csv', index=False)
+Copia el código
+¡Listo! Pudimos leer datos de Google Sheets con la biblioteca Pandas e incluso guardamos el DataFrame que ahora se puede compartir con otras personas o ser utilizado en análisis posteriores.
+*************************************************************************************++
+ 10 Lo que aprendimos
+ Siguiente pregunta
+
+En esta aula, aprendimos a:
+
+Entender lo qué es una hoja de cálculo;
+Leer un archivo en formato XLSX;
+Identificar páginas en una hoja de trabajo;
+Leer páginas e intervalos específicos de una hoja de trabajo;
+Leer sólo unas pocas líneas de una hoja de cálculo;
+Escribir un archivo en formato XLSX;
+Importar datos de Google Sheets.
+***************************************************
+***************************************************
+03.Leyendo archivos JSON
+01 Proyecto del aula anterior
+Si lo desea, puede descargar aquí el proyecto del curso en el punto donde paramos la clase anterior.
+*****************************************************************+
+
+
 
 
